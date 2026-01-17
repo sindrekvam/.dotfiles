@@ -13,6 +13,7 @@ conform.setup({
 		},
 		go = { "gofmt" },
         yaml = { "prettier" },
+        cpp = { "clang-format" },
 	},
 })
 
