@@ -23,3 +23,6 @@ export PATH="$PATH:/usr/local/go/bin"
 # Rust
 export PATH="$PATH:$HOME/.cargo/bin"
 . "$HOME/.cargo/env"
+
+# opencode
+export PATH="$PATH:$HOME/.opencode/bin"
