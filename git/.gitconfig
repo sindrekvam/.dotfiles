@@ -46,7 +46,6 @@
 	untracked = red
 [user]
 	name = Sindre Mandelid Kvam
-	email = sindre.m.kvam@gmail.com
 
 [help]
   	# Automatically correct and execute mistyped commands
