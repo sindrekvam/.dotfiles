@@ -103,9 +103,10 @@ source $HOME/.local/scripts/venv_wrapper
 # - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
 
-alias glg="git log --graph --oneline --decorate --all"
-
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# opencode
+export PATH=/home/sindrekvam/.opencode/bin:$PATH
