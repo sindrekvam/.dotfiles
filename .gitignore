@@ -4,3 +4,5 @@ tmux/.config/tmux/plugins/
 
 *.zhistory
 *.zcompdump*
+
+ssh/.ssh/conf.d/99-*
