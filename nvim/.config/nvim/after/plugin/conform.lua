@@ -12,8 +12,9 @@ conform.setup({
 			"ruff_organize_imports",
 		},
 		go = { "gofmt" },
-        yaml = { "prettier" },
-        cpp = { "clang-format" },
+		yaml = { "prettier" },
+		json = { "prettier" },
+		cpp = { "clang-format" },
 	},
 })
 
