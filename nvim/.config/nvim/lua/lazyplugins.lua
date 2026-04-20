@@ -16,12 +16,12 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    "olimorris/onedarkpro.nvim",
     "lewis6991/gitsigns.nvim",
     "folke/which-key.nvim",
     "nvim-tree/nvim-tree.lua",
     "sakhnik/nvim-gdb",
     "kylechui/nvim-surround",
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
     { "rcarriga/nvim-dap-ui",        dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } },
     { "stevearc/conform.nvim",       opts = {} },
     { "nvim-tree/nvim-web-devicons", opts = {} },
