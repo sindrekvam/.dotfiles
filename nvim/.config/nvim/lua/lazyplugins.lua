@@ -38,6 +38,10 @@ require("lazy").setup({
         lazy = false,
         build = ":TSUpdate",
     },
+    {
+        'nvim-lualine/lualine.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' }
+    },
     -- LSP stuff
     {
         "mason-org/mason-lspconfig.nvim",
