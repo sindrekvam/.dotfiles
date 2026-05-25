@@ -14,6 +14,8 @@ conform.setup({
 		go = { "gofmt" },
 		yaml = { "prettier" },
 		json = { "prettier" },
+		js = { "prettier" },
+		ts = { "prettier" },
 		cpp = { "clang-format" },
 	},
 })
