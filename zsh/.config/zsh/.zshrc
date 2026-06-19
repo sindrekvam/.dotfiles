@@ -77,6 +77,10 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+setopt PROMPT_SUBST
+PROMPT='%F{cyan}%~%f $(git_prompt_info)
+%F{yellow}>%f '
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
