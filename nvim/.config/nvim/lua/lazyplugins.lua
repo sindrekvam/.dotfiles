@@ -17,6 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     "lewis6991/gitsigns.nvim",
+    "saghen/blink.indent",
     "folke/which-key.nvim",
     "nvim-tree/nvim-tree.lua",
     "sakhnik/nvim-gdb",
