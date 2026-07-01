@@ -9,7 +9,7 @@ mason_lspconfig.setup({
 		"stylua", -- Lua formatter
 		"lua_ls",
 		"vtsls",
-        "gopls", -- Golang language server
+		"gopls", -- Golang language server
 	},
 	handlers = {
 		function(server_name)
@@ -29,8 +29,17 @@ if vim.fn.executable("rust_analyzer") then
 	vim.lsp.enable("rust_analyzer")
 end
 if vim.fn.executable("gofmt") then
-    vim.lsp.enable("gofmt")
+	vim.lsp.enable("gofmt")
 end
+
+vim.lsp.config("clangd", {
+    cmd = {
+        "clangd",
+        "--background-index",
+        "-j=4", -- Limit to not use all cores
+        "--clang-tidy",
+    },
+})
 
 -- Remove warning for undefined vim
 vim.lsp.config("lua_ls", {
