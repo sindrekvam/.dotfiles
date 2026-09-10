@@ -32,15 +32,6 @@ if vim.fn.executable("gofmt") then
 	vim.lsp.enable("gofmt")
 end
 
-vim.lsp.config("clangd", {
-	cmd = {
-		"clangd",
-		"--background-index",
-		"-j=4", -- Limit to not use all cores
-		"--clang-tidy",
-	},
-})
-
 -- Use pyright for go-to-definition hover and autocomplete
 -- Use ruff for linting and formatting
 vim.lsp.config("pyright", {
