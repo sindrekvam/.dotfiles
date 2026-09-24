@@ -6,6 +6,7 @@ local luasnip = require("luasnip")
 mason_lspconfig.setup({
 	ensure_installed = {
 		"ruff", -- Linter and formatter for python
+		"pyright",
 		"stylua", -- Lua formatter
 		"lua_ls",
 		"vtsls",
@@ -48,6 +49,7 @@ vim.lsp.config("pyright", {
 		},
 	},
 })
+vim.lsp.config("ruff", {})
 
 -- Remove warning for undefined vim
 vim.lsp.config("lua_ls", {
