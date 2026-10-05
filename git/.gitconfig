@@ -5,7 +5,7 @@
 	ap = "!git add -p"
 
 	# Print git log in a pretty way
-	l = log --pretty=oneline -n 20 --graph --abbrev-commit
+	l = log --pretty=oneline --graph --abbrev-commit
 
 	# view short status
 	s = status -s
