@@ -1,3 +1,8 @@
+require("nvim-treesitter").setup({
+	-- Directory to install parsers and queries to (prepended to `runtimepath` to have priority)
+	install_dir = vim.fn.stdpath("data") .. "/site",
+})
+
 require("nvim-treesitter").install({
 	"c",
 	"lua",
@@ -5,10 +10,7 @@ require("nvim-treesitter").install({
 	"vimdoc",
 	"query",
 	"markdown",
-	"markdown_inline",
 	"python",
-	"javascript",
-	"typescript",
 })
 
 vim.api.nvim_create_autocmd("FileType", {
