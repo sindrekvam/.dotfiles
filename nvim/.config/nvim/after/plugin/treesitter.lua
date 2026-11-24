@@ -4,18 +4,36 @@ require("nvim-treesitter").setup({
 })
 
 require("nvim-treesitter").install({
-	"c",
-	"lua",
+	"bash",
+	"zsh",
+	"toml",
+	"json",
+	"cmake",
+	"make",
 	"vim",
 	"vimdoc",
 	"query",
 	"markdown",
+	"markdown_inline",
+	"dockerfile",
+
+	"c",
+	"cpp",
+	"lua",
 	"python",
+	"vhdl",
+	"go",
+	"html",
+	"javascript",
+	"typescript",
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "<filetype>" },
-	callback = function()
-		vim.treesitter.start()
+	pattern = "*",
+	callback = function(event)
+		local lang = vim.treesitter.language.get_lang(event.match)
+		if lang and vim.treesitter.language.add(lang) and vim.treesitter.query.get(lang, "highlights") then
+			vim.treesitter.start(event.buf, lang)
+		end
 	end,
 })
