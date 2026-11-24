@@ -22,10 +22,20 @@ require("lazy").setup({
     "nvim-tree/nvim-tree.lua",
     "sakhnik/nvim-gdb",
     "kylechui/nvim-surround",
-    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
     { "rcarriga/nvim-dap-ui",        dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } },
     { "stevearc/conform.nvim",       opts = {} },
     { "nvim-tree/nvim-web-devicons", opts = {} },
+
+    -- Color scheme
+    -- { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+    {
+        "folke/tokyonight.nvim",
+        lazy = false,
+        priority = 1000,
+        config = function()
+			vim.cmd.colorscheme("tokyonight-moon")
+        end,
+    },
 
     -- Navigation
     {
